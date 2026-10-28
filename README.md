@@ -92,4 +92,4 @@ Runtime activation, QA deployment, script ordering, and consent enforcement have
 
 ## License
 
-No license has been assigned to this repository yet.
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
