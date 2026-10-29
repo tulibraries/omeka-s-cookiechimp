@@ -11,7 +11,9 @@ class Module extends AbstractModule
     public function addCookieChimp(Event $event)
     {
         $services = $this->getServiceLocator();
-        if (!$services->get('Omeka\Status')->isSiteRequest()) {
+        $status = $services->get('Omeka\Status');
+
+        if (!$status->isSiteRequest() && $status->getRouteMatch()?->getMatchedRouteName() !== 'top') {
             return;
         }
 
